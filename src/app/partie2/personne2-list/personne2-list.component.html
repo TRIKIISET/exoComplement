@@ -1,0 +1,19 @@
+<div class="container">
+<h1>Liste des personnes</h1>
+<ul class="list-group">
+    <app-personne2 *ngFor="let p of personnes"
+    [personne]="p">
+    </app-personne2>
+</ul>
+</div>
+
+<!-- Dans cette solution, comme on passe un objet qui est une référence, en modifiant la valeur
+    de l'attribut etudiant dans le composant enfant, même dans le tableau la valeur du champ est modifiée
+Enlevez le commentaire pour tester-->
+<!--
+<ul>
+    <li *ngFor="let p of personnes">
+        {{p.nom}} a pour age {{p.age}} Etudiant: {{p.etudiant}}
+    </li>
+</ul>
+-->

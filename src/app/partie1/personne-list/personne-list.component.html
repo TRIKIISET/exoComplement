@@ -1,1 +1,21 @@
-<p>personne-list works!</p>
+<div class="container">
+    <h1>Liste des personnes</h1>
+    <ul class='list-group'>
+        <app-personne *ngFor="let p of personnes"
+        [nomPersonne]="p.nom"
+        [agePersonne]="p.age"
+        [isEtudiant]="p.etudiant">
+        </app-personne>
+    </ul>
+</div>
+
+<!-- Dans cette solution, ce n'est que l'affichage dsu statut de la personne
+etudiant ou non qui change, mais, dans le tableau ça reste pareil
+Enlevez le commentaire pour tester-->
+<!--
+<ul>
+    <li *ngFor="let p of personnes">
+        {{p.nom}} a pour age {{p.age}} Etudiant: {{p.etudiant}}
+    </li>
+</ul>
+-->
